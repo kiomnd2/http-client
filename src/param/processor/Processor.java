@@ -48,6 +48,8 @@ public abstract class Processor<T> {
         return field.get(target);
     }
 
+    // 공통부를 세팅
     protected abstract Param setCommon(Param ... params);
+    // 결과 데이터를 생성합니다
     protected abstract T makeResult(Map<String ,Object> map);
 }
