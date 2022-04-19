@@ -47,6 +47,38 @@ public class HttpOption {
         return connection;
     }
 
+    public String getMethod() {
+        return method;
+    }
+
+    public int getTimeout() {
+        return timeout;
+    }
+
+    public int getReadTimeout() {
+        return readTimeout;
+    }
+
+    public boolean isSetDoInput() {
+        return setDoInput;
+    }
+
+    public boolean isSetDoOutput() {
+        return setDoOutput;
+    }
+
+    public String getCharset() {
+        return charset;
+    }
+
+    public String getReadCharset() {
+        return readCharset;
+    }
+
+    public HashMap<String, String> getRequestProperty() {
+        return requestProperty;
+    }
+
     public void setMethod(String method) {
         this.method = method;
     }
