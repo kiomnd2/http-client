@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public abstract class Processor<T> {
+public abstract class Processor {
 
-    public final T process(Param ... params) {
+    public final String process(Param ... params) {
         Param param = this.setCommon(params);
         HashMap<String, Object> result = new HashMap<>();
         recursive(param, result);
@@ -51,5 +51,5 @@ public abstract class Processor<T> {
     // 공통부를 세팅
     protected abstract Param setCommon(Param ... params);
     // 결과 데이터를 생성합니다
-    protected abstract T makeResult(Map<String ,Object> map);
+    protected abstract String makeResult(Map<String ,Object> map);
 }
